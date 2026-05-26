@@ -266,6 +266,43 @@
     .mobile-nav.open { display: flex; }
     .mobile-nav a { font-size: 22px; font-weight: 700; color: var(--black); text-decoration: none; }
     .mobile-nav .nav-btn { font-size: 15px; padding: 14px 40px; }
+    /* STORY SEGMENT */
+    .story-wrap { background: var(--gray-100); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); }
+    .story-inner { max-width: 900px; margin: 0 auto; padding: 72px 48px; }
+    .story-hook {
+      font-size: clamp(18px, 2.4vw, 26px); font-weight: 900;
+      line-height: 1.5; margin-bottom: 32px; letter-spacing: -.01em;
+    }
+    .story-hook em { font-style: normal; color: var(--red); }
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gray-200); }
+    .story-cell { background: var(--white); padding: 28px 28px; }
+    .story-cell-label { font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--red); text-transform: uppercase; margin-bottom: 10px; }
+    .story-cell-text { font-size: 13px; color: var(--gray-600); line-height: 1.9; }
+    .story-resolve {
+      margin-top: 32px; padding: 24px 28px;
+      border-left: 4px solid var(--black); background: var(--black); color: var(--white);
+    }
+    .story-resolve p { font-size: 14px; line-height: 1.85; color: rgba(255,255,255,.85); }
+    .story-resolve strong { color: var(--white); }
+
+    /* CAPS DETAIL BUTTON */
+    .caps-link-btn {
+      display: inline-block; margin-top: 24px;
+      font-size: 13px; font-weight: 700; color: var(--black);
+      border-bottom: 2px solid var(--red); padding-bottom: 2px;
+      text-decoration: none; letter-spacing: .03em;
+      transition: color .15s;
+    }
+    .caps-link-btn:hover { color: var(--red); }
+
+    /* FOOTER LINKS */
+    .footer-links { display: flex; gap: 24px; align-items: center; }
+    .footer-link {
+      font-size: 12px; color: #555; text-decoration: none;
+      font-weight: 500; transition: color .15s;
+    }
+    .footer-link:hover { color: var(--white); }
+
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
     .reveal.visible { opacity: 1; transform: none; }
@@ -276,12 +313,15 @@
       .nav-right .nav-btn { display: none; }
       .hamburger { display: flex; }
       .hero-inner, .section, .cta-inner, footer { padding-left: 20px; padding-right: 20px; }
+      .story-inner { padding-left: 20px; padding-right: 20px; }
       .pillars { grid-template-columns: 1fr; }
+      .story-grid { grid-template-columns: 1fr; }
       .caps-layout { grid-template-columns: 1fr; }
       .flow-steps { grid-template-columns: 1fr 1fr; }
       .pricing-grid { grid-template-columns: 1fr; }
       .cta-form { flex-direction: column; }
-      footer { flex-direction: column; gap: 12px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
+      .footer-links { justify-content: center; }
     }
   </style>
 </head>
@@ -371,6 +411,30 @@
   </div>
 </div>
 
+<!-- STORY SEGMENT -->
+<div class="story-wrap">
+  <div class="story-inner">
+    <div class="section-tag reveal">インターン定着の現実</div>
+    <h2 class="story-hook reveal">
+      手塩にかけた学生が、<br/>
+      <em>1ヶ月で「辞めます」</em>と言った日のこと。
+    </h2>
+    <div class="story-grid reveal">
+      <div class="story-cell">
+        <div class="story-cell-label">企業が感じる痛み</div>
+        <p class="story-cell-text">オリエンから業務レクチャー、ようやく仕事を任せられるようになった矢先に離脱。残るのは徒労感と、また一から育て直す疲弊感だけです。</p>
+      </div>
+      <div class="story-cell">
+        <div class="story-cell-label">離脱の構造的原因</div>
+        <p class="story-cell-text">多くの場合、入社前の「覚悟の温度差」が原因です。企業は真剣に受け入れ、学生は「なんとなく応募」。この非対称が短期離脱を生む構造です。</p>
+      </div>
+    </div>
+    <div class="story-resolve reveal">
+      <p>インターンは、企業と学生が<strong>お互いに本気だから成立</strong>します。一定期間やり切ることで、学生は本物のキャリアを積み、企業は戦力を得る。Gritters Internでは、登録の入口から「やり切ること」を学生に約束させることで、<strong>覚悟の揃った出会いだけを届けます。</strong></p>
+    </div>
+  </div>
+</div>
+
 <hr/>
 
 <!-- CAPS -->
@@ -394,6 +458,7 @@
           <span class="univ-tag">日東駒専</span>
           <span class="univ-tag">+ 拡大中</span>
         </div>
+        <a href="https://campanion.jp/" target="_blank" class="caps-link-btn reveal">CAPSの詳細を見る →</a>
       </div>
       <div class="caps-stats reveal">
         <div class="caps-stat">
@@ -539,6 +604,10 @@
   <div class="footer-logo">
     <img src="./logo.png" alt="Gritters Intern" style="height:24px;display:block;object-fit:contain;filter:brightness(0.4);"/>
     </div>
+  <div class="footer-links">
+    <a href="https://gritters.jp/" target="_blank" class="footer-link">運営会社について</a>
+    <a href="https://campanion.jp/" target="_blank" class="footer-link">CAPSの詳細</a>
+  </div>
   <div class="footer-copy">© 2025 Gritters Intern. All rights reserved.</div>
 </footer>
 
