@@ -69,7 +69,7 @@
     .hero {
       padding-top: 60px;
       background: var(--black); color: var(--white);
-      min-height: 500px;
+      min-height: 480px;
       display: flex; align-items: center;
       position: relative; overflow: hidden;
     }
@@ -78,7 +78,7 @@
       top: 0; left: 0; width: 5px; height: 100%;
       background: var(--red);
     }
-    .hero-inner { max-width: 860px; margin: 0 auto; padding: 80px 48px; }
+    .hero-inner { max-width: 860px; margin: 0 auto; padding: 72px 48px; }
     .hero-tag {
       font-size: 11px; font-weight: 700; letter-spacing: .18em;
       color: var(--red); text-transform: uppercase; margin-bottom: 20px;
@@ -109,7 +109,7 @@
     .btn-outline:hover { border-color: #888; color: var(--white); }
 
     /* SECTION */
-    .section { padding: 88px 48px; max-width: 900px; margin: 0 auto; }
+    .section { padding: 64px 48px; max-width: 900px; margin: 0 auto; }
     .section-tag {
       font-size: 11px; font-weight: 700; letter-spacing: .18em;
       color: var(--red); text-transform: uppercase; margin-bottom: 12px;
@@ -125,21 +125,13 @@
     /* PILLARS */
     .pillars-wrap { background: var(--gray-100); }
     .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--gray-200); }
-    .pillar { background: var(--white); padding: 40px 32px; }
+    .pillar { background: var(--white); padding: 36px 32px; }
     .pillar-num { font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--red); margin-bottom: 16px; }
     .pillar-title { font-size: 17px; font-weight: 900; line-height: 1.45; margin-bottom: 12px; }
     .pillar-body { font-size: 13px; color: var(--gray-600); line-height: 1.85; }
 
-    /* QUOTE */
-    .quote-block {
-      border-left: 4px solid var(--red);
-      padding: 24px 28px; background: var(--gray-100); margin-top: 40px;
-    }
-    .quote-block p { font-size: 15px; font-weight: 500; line-height: 1.85; }
-    .quote-block cite { display: block; font-size: 12px; color: var(--gray-400); margin-top: 10px; font-style: normal; }
-
     /* CAPS */
-    .caps-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; margin-top: 48px; }
+    .caps-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; margin-top: 40px; }
     .caps-desc { font-size: 14px; color: var(--gray-600); line-height: 1.9; margin-bottom: 20px; }
     .univ-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
     .univ-tag {
@@ -153,11 +145,21 @@
     .stat-value small { font-size: 14px; color: var(--gray-400); font-weight: 500; }
     .stat-note { font-size: 12px; color: var(--gray-400); margin-top: 5px; }
 
+    /* CAPS DETAIL BUTTON */
+    .caps-link-btn {
+      display: inline-block; margin-top: 24px;
+      font-size: 13px; font-weight: 700; color: var(--black);
+      border-bottom: 2px solid var(--red); padding-bottom: 2px;
+      text-decoration: none; letter-spacing: .03em;
+      transition: color .15s;
+    }
+    .caps-link-btn:hover { color: var(--red); }
+
     /* FLOW */
     .flow-wrap { background: var(--gray-100); }
     .flow-steps {
       display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1px; background: var(--gray-200); margin-top: 48px;
+      gap: 1px; background: var(--gray-200); margin-top: 40px;
     }
     .flow-step { background: var(--white); padding: 32px 24px; }
     .flow-step-n { font-size: 28px; font-weight: 900; color: var(--gray-200); line-height: 1; margin-bottom: 14px; }
@@ -165,7 +167,7 @@
     .flow-step-body { font-size: 13px; color: var(--gray-600); line-height: 1.8; }
 
     /* PRICING */
-    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gray-200); margin-top: 48px; }
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gray-200); margin-top: 40px; }
     .pricing-card { background: var(--white); padding: 40px 36px; }
     .pricing-card.featured { background: var(--black); color: var(--white); }
     .pricing-card-tag { font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 14px; }
@@ -191,22 +193,11 @@
     .guarantee-text strong { display: block; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
     .guarantee-text p { font-size: 13px; color: var(--gray-600); line-height: 1.8; }
 
-    /* CTA */
+    /* CTA SECTION */
     .cta-wrap { background: var(--red); color: var(--white); }
-    .cta-inner { max-width: 680px; margin: 0 auto; padding: 88px 48px; text-align: center; }
+    .cta-inner { max-width: 680px; margin: 0 auto; padding: 72px 48px; text-align: center; }
     .cta-title { font-size: clamp(22px, 3.5vw, 34px); font-weight: 900; line-height: 1.4; margin-bottom: 16px; }
     .cta-sub { font-size: 14px; color: rgba(255,255,255,.8); line-height: 1.85; margin-bottom: 40px; }
-    .cta-form { display: flex; max-width: 460px; margin: 0 auto; }
-    .cta-input {
-      flex: 1; padding: 14px 16px; border: none; outline: none;
-      font-family: var(--font); font-size: 14px;
-    }
-    .cta-submit {
-      padding: 14px 22px; background: var(--black); color: var(--white);
-      font-family: var(--font); font-size: 13px; font-weight: 700;
-      border: none; cursor: pointer; white-space: nowrap; transition: background .15s;
-    }
-    .cta-submit:hover { background: #333; }
     .cta-cal-btn {
       display: inline-block;
       background: var(--black); color: var(--white);
@@ -217,21 +208,53 @@
     .cta-cal-btn:hover { background: #333; }
     .cta-fine { font-size: 12px; color: rgba(255,255,255,.6); margin-top: 14px; }
 
+    /* FLOATING CTA */
+    .floating-cta {
+      position: fixed;
+      bottom: 32px; right: 32px;
+      z-index: 200;
+      opacity: 0; transform: translateY(16px);
+      transition: opacity .35s ease, transform .35s ease;
+      pointer-events: none;
+    }
+    .floating-cta.visible {
+      opacity: 1; transform: translateY(0);
+      pointer-events: auto;
+    }
+    .floating-cta a {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--red); color: var(--white);
+      font-family: var(--font); font-size: 13px; font-weight: 700;
+      padding: 14px 22px;
+      text-decoration: none;
+      box-shadow: 0 4px 24px rgba(0,0,0,.22);
+      transition: background .15s, box-shadow .15s;
+      white-space: nowrap;
+    }
+    .floating-cta a:hover { background: var(--red-dark); box-shadow: 0 6px 32px rgba(0,0,0,.3); }
+    .floating-cta-arrow { font-size: 16px; }
+
     /* FOOTER */
     footer {
       background: var(--black); color: #444;
       padding: 28px 48px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .footer-logo img { height: 26px; display: block; object-fit: contain; }
+    .footer-logo img { height: 24px; display: block; object-fit: contain; }
     .footer-copy { font-size: 12px; }
+    .footer-links { display: flex; gap: 24px; align-items: center; }
+    .footer-link {
+      font-size: 12px; color: #555; text-decoration: none;
+      font-weight: 500; transition: color .15s;
+    }
+    .footer-link:hover { color: var(--white); }
 
     /* FAQ */
-    .faq-list { margin-top: 48px; border-top: 1px solid var(--gray-200); }
+    .faq-list { margin-top: 40px; border-top: 1px solid var(--gray-200); }
     .faq-item { border-bottom: 1px solid var(--gray-200); }
     .faq-q {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 22px 0; cursor: pointer; font-size: 15px; font-weight: 700;
+      padding: 20px 0; cursor: pointer; font-size: 15px; font-weight: 700;
       gap: 16px; list-style: none; user-select: none;
     }
     .faq-q::-webkit-details-marker { display: none; }
@@ -242,7 +265,8 @@
       font-size: 14px; color: var(--red); transition: transform .22s; line-height: 1;
     }
     details[open] > .faq-q .faq-icon { transform: rotate(45deg); }
-    .faq-a { font-size: 13px; color: var(--gray-600); line-height: 1.9; padding-bottom: 22px; }
+    .faq-a { font-size: 13px; color: var(--gray-600); line-height: 1.9; padding-bottom: 20px; }
+
     /* HAMBURGER */
     .hamburger {
       display: none; flex-direction: column; justify-content: center;
@@ -266,42 +290,6 @@
     .mobile-nav.open { display: flex; }
     .mobile-nav a { font-size: 22px; font-weight: 700; color: var(--black); text-decoration: none; }
     .mobile-nav .nav-btn { font-size: 15px; padding: 14px 40px; }
-    /* STORY SEGMENT */
-    .story-wrap { background: var(--gray-100); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); }
-    .story-inner { max-width: 900px; margin: 0 auto; padding: 72px 48px; }
-    .story-hook {
-      font-size: clamp(18px, 2.4vw, 26px); font-weight: 900;
-      line-height: 1.5; margin-bottom: 32px; letter-spacing: -.01em;
-    }
-    .story-hook em { font-style: normal; color: var(--red); }
-    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gray-200); }
-    .story-cell { background: var(--white); padding: 28px 28px; }
-    .story-cell-label { font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--red); text-transform: uppercase; margin-bottom: 10px; }
-    .story-cell-text { font-size: 13px; color: var(--gray-600); line-height: 1.9; }
-    .story-resolve {
-      margin-top: 32px; padding: 24px 28px;
-      border-left: 4px solid var(--black); background: var(--black); color: var(--white);
-    }
-    .story-resolve p { font-size: 14px; line-height: 1.85; color: rgba(255,255,255,.85); }
-    .story-resolve strong { color: var(--white); }
-
-    /* CAPS DETAIL BUTTON */
-    .caps-link-btn {
-      display: inline-block; margin-top: 24px;
-      font-size: 13px; font-weight: 700; color: var(--black);
-      border-bottom: 2px solid var(--red); padding-bottom: 2px;
-      text-decoration: none; letter-spacing: .03em;
-      transition: color .15s;
-    }
-    .caps-link-btn:hover { color: var(--red); }
-
-    /* FOOTER LINKS */
-    .footer-links { display: flex; gap: 24px; align-items: center; }
-    .footer-link {
-      font-size: 12px; color: #555; text-decoration: none;
-      font-weight: 500; transition: color .15s;
-    }
-    .footer-link:hover { color: var(--white); }
 
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
@@ -313,15 +301,14 @@
       .nav-right .nav-btn { display: none; }
       .hamburger { display: flex; }
       .hero-inner, .section, .cta-inner, footer { padding-left: 20px; padding-right: 20px; }
-      .story-inner { padding-left: 20px; padding-right: 20px; }
       .pillars { grid-template-columns: 1fr; }
-      .story-grid { grid-template-columns: 1fr; }
       .caps-layout { grid-template-columns: 1fr; }
       .flow-steps { grid-template-columns: 1fr 1fr; }
       .pricing-grid { grid-template-columns: 1fr; }
-      .cta-form { flex-direction: column; }
       footer { flex-direction: column; gap: 12px; text-align: center; }
       .footer-links { justify-content: center; }
+      .floating-cta { bottom: 20px; right: 16px; left: 16px; }
+      .floating-cta a { justify-content: center; }
     }
   </style>
 </head>
@@ -329,27 +316,35 @@
 
 <header>
   <a href="#" class="nav-logo">
-    <img src="./logo.png" alt="Gritters Intern" style="height:32px;display:block;object-fit:contain;"/>
-    </a>
+    <img src="./logo.png" alt="Gritters Intern"/>
+  </a>
   <div class="nav-right">
-    <a href="#concept" class="nav-link">コンセプト</a>
     <a href="#caps" class="nav-link">学生流入</a>
+    <a href="#flow" class="nav-link">掲載の流れ</a>
     <a href="#pricing" class="nav-link">料金</a>
     <a href="#faq" class="nav-link">FAQ</a>
-    <a href="https://cal.com/gritters/30min" target="_blank" class="nav-btn">掲載を申し込む</a>
+    <a href="https://cal.com/gritters/30min" target="_blank" class="nav-btn">無料ヒアリングを予約する</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
 </header>
 
 <nav class="mobile-nav" id="mobileNav">
-  <a href="#concept" class="mobile-link">コンセプト</a>
   <a href="#caps" class="mobile-link">学生流入</a>
+  <a href="#flow" class="mobile-link">掲載の流れ</a>
   <a href="#pricing" class="mobile-link">料金</a>
   <a href="#faq" class="mobile-link">FAQ</a>
-  <a href="https://cal.com/gritters/30min" target="_blank" class="nav-btn">掲載を申し込む</a>
+  <a href="https://cal.com/gritters/30min" target="_blank" class="nav-btn">無料ヒアリングを予約する</a>
 </nav>
+
+<!-- FLOATING CTA -->
+<div class="floating-cta" id="floatingCta">
+  <a href="https://cal.com/gritters/30min" target="_blank">
+    無料ヒアリングを予約する <span class="floating-cta-arrow">→</span>
+  </a>
+</div>
+
 <!-- HERO -->
-<div class="hero">
+<div class="hero" id="hero">
   <div class="hero-inner">
     <div class="hero-tag">For Companies — 企業の方へ</div>
     <h1 class="hero-title">
@@ -358,7 +353,7 @@
       インターン求人媒体。
     </h1>
     <p class="hero-sub">
-      Gritters Internは、インターンをやり切る意志を持つ学生だけが集まる成果報酬型プラットフォームです。採用が確定するまで、費用は一切発生しません。<br/><span style="font-size:12px;color:rgba(255,255,255,.7);">※登録にはGoogleアカウントが必要です</span>
+      Gritters Internは、インターンをやり切る意志を持つ学生だけが集まる成果報酬型プラットフォームです。採用が確定するまで、費用は一切発生しません。
     </p>
     <div class="hero-actions">
       <a href="https://cal.com/gritters/30min" target="_blank" class="btn-red">無料でヒアリングを予約する</a>
@@ -373,12 +368,12 @@
     <div class="section-tag reveal">3つの特徴</div>
     <h2 class="section-title reveal">Gritters Internが選ばれる理由</h2>
   </div>
-  <div class="section" style="padding-top:32px">
+  <div class="section" style="padding-top:28px">
     <div class="pillars reveal">
       <div class="pillar">
         <div class="pillar-num">01</div>
         <div class="pillar-title">「やり切る」<br/>コンセプトの明確性</div>
-        <p class="pillar-body">登録には「インターンをやり切る」という意志への同意が必須。気軽な応募や途中離脱を構造的に防ぎ、本気でキャリアを積みたい学生だけが集まります。</p>
+        <p class="pillar-body">Gritters Internは「やり切る」を前提とした設計のプラットフォーム。気軽な応募や途中離脱ではなく、本気でキャリアを積みたい学生だけが集まります。</p>
       </div>
       <div class="pillar">
         <div class="pillar-num">02</div>
@@ -390,47 +385,6 @@
         <div class="pillar-title">採用成果報酬で<br/>リスク最小化</div>
         <p class="pillar-body">採用確定まで掲載・選考費用はゼロ。採用が決まったときだけ成果報酬が発生するため、採用コストを結果にだけ支払う形を実現します。</p>
       </div>
-    </div>
-  </div>
-</div>
-
-<hr/>
-
-<!-- CONCEPT -->
-<div id="concept">
-  <div class="section">
-    <div class="section-tag reveal">コンセプト</div>
-    <h2 class="section-title reveal">「とりあえず応募」を<br/>なくす採用体験。</h2>
-    <p class="section-body reveal">
-      一般的なインターン媒体では、応募ハードルが低い分、ミスマッチや途中離脱が多発します。Gritters Internは登録時から「やり切ること」を前提とすることで、採用後の定着率と成果の質を高めます。
-    </p>
-    <div class="quote-block reveal">
-      <p>インターンとは、企業と学生が共に成長するための真剣勝負。「やってみたい」だけでなく、「やり遂げる」を約束できる学生にだけ、Gritters Internへの登録を許可しています。</p>
-      <cite>— Gritters Intern コンセプトステートメント</cite>
-    </div>
-  </div>
-</div>
-
-<!-- STORY SEGMENT -->
-<div class="story-wrap">
-  <div class="story-inner">
-    <div class="section-tag reveal">インターン定着の現実</div>
-    <h2 class="story-hook reveal">
-      手塩にかけた学生が、<br/>
-      <em>1ヶ月で「辞めます」</em>と言った日のこと。
-    </h2>
-    <div class="story-grid reveal">
-      <div class="story-cell">
-        <div class="story-cell-label">企業が感じる痛み</div>
-        <p class="story-cell-text">オリエンから業務レクチャー、ようやく仕事を任せられるようになった矢先に離脱。残るのは徒労感と、また一から育て直す疲弊感だけです。</p>
-      </div>
-      <div class="story-cell">
-        <div class="story-cell-label">離脱の構造的原因</div>
-        <p class="story-cell-text">多くの場合、入社前の「覚悟の温度差」が原因です。企業は真剣に受け入れ、学生は「なんとなく応募」。この非対称が短期離脱を生む構造です。</p>
-      </div>
-    </div>
-    <div class="story-resolve reveal">
-      <p>インターンは、企業と学生が<strong>お互いに本気だから成立</strong>します。一定期間やり切ることで、学生は本物のキャリアを積み、企業は戦力を得る。Gritters Internでは、登録の入口から「やり切ること」を学生に約束させることで、<strong>覚悟の揃った出会いだけを届けます。</strong></p>
     </div>
   </div>
 </div>
@@ -557,7 +511,7 @@
 </div>
 
 <!-- FAQ -->
-<div id="faq">
+<div id="faq" style="background:var(--gray-100);">
   <div class="section">
     <div class="section-tag reveal">よくある質問</div>
     <h2 class="section-title reveal">FAQ</h2>
@@ -596,14 +550,14 @@
     <h2 class="cta-title">まずは、30分の<br/>無料ヒアリングから。</h2>
     <p class="cta-sub">掲載・選考費用は無料。採用が確定したときだけ費用が発生します。<br/>日程を選んで、そのまま予約できます。</p>
     <a href="https://cal.com/gritters/30min" target="_blank" class="cta-cal-btn">日程を選んで予約する →</a>
-    <p class="cta-fine" style="color:rgba(255,255,255,.7)">30分 / Google Meet / ※登録にはGoogleアカウントが必要です</p>
+    <p class="cta-fine">30分 / Google Meet</p>
   </div>
 </div>
 
 <footer>
   <div class="footer-logo">
-    <img src="./logo.png" alt="Gritters Intern" style="height:24px;display:block;object-fit:contain;filter:brightness(0.4);"/>
-    </div>
+    <img src="./logo.png" alt="Gritters Intern" style="height:24px;filter:brightness(0.4);"/>
+  </div>
   <div class="footer-links">
     <a href="https://gritters.jp/" target="_blank" class="footer-link">運営会社について</a>
     <a href="https://campanion.jp/" target="_blank" class="footer-link">CAPSの詳細</a>
@@ -612,6 +566,7 @@
 </footer>
 
 <script>
+  // Hamburger
   const hbg = document.getElementById('hamburger');
   const mnav = document.getElementById('mobileNav');
   hbg.addEventListener('click', () => {
@@ -626,12 +581,28 @@
       document.body.style.overflow = '';
     });
   });
+
+  // Reveal on scroll
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 60);
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Floating CTA: show after scrolling past hero
+  const floatingCta = document.getElementById('floatingCta');
+  const hero = document.getElementById('hero');
+  const heroObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) {
+        floatingCta.classList.add('visible');
+      } else {
+        floatingCta.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+  heroObs.observe(hero);
 </script>
 </body>
 </html>
